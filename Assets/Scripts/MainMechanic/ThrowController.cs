@@ -26,8 +26,8 @@ public class ThrowController : MonoBehaviour
     {
         if (ballRb == null)
             return;
-        //TouchDragAndDrop();
-        MouseDragAndDrop();
+        TouchDragAndDrop();
+        //MouseDragAndDrop();
         //Debug.Log(worldTouchPosition);
     }
     private void ThrowBall()

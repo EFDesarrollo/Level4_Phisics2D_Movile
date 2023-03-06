@@ -67,6 +67,7 @@ public class EnemyMovment : MonoBehaviour
                 timeManager.DoSlowMotion();
                 cam.GetComponent<CameraShake>().Trauma = deathCameraInpact;
                 gameManager.PlayerPoints += points;
+                GameManager.instance.Timer += 1;
                 Destroy(gameObject);
             }
         }

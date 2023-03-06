@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     private TimeManager timeManager;
-    private float Timer;
+    public float Timer;
     [HideInInspector] public float PlayerPoints = 0;
     private float MaxPointsReached = 0;
 
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         timeManager = Camera.main.GetComponent<TimeManager>();
         Timer = gameTime;
         MaxPointsReached = PlayerPrefs.GetFloat("HigScore");
